@@ -98,9 +98,15 @@ nnstreamer_libdir = join_paths(nnstreamer_prefix, get_option('libdir'))
 nnstreamer_bindir = join_paths(nnstreamer_prefix, get_option('bindir'))
 nnstreamer_includedir = join_paths(nnstreamer_prefix, get_option('includedir'))
 nnstreamer_inidir = get_option('sysconfdir')
+message(nnstreamer_prefix)
+message(nnstreamer_libdir)
+message(nnstreamer_bindir)
+message(nnstreamer_includedir)
+message(nnstreamer_inidir)
 
 # nnstreamer plugins path
 plugins_install_dir = join_paths(nnstreamer_libdir, 'gstreamer-' + gst_api_verision)
+message(plugins_install_dir)
 
 # nnstreamer sub-plugins path
 subplugin_install_prefix = join_paths(nnstreamer_prefix, 'lib', 'nnstreamer')
@@ -109,6 +115,11 @@ decoder_subplugin_install_dir = join_paths(subplugin_install_prefix, 'decoders')
 customfilter_install_dir = join_paths(subplugin_install_prefix, 'customfilters')
 converter_subplugin_install_dir = join_paths(subplugin_install_prefix, 'converters')
 unittest_install_dir = join_paths(subplugin_install_prefix, 'unittest')
+message(subplugin_install_prefix)
+message(filter_subplugin_install_dir)
+message(decoder_subplugin_install_dir)
+message(customfilter_install_dir)
+message(converter_subplugin_install_dir)
 
 # Set default configuration
 nnstreamer_conf = configuration_data()

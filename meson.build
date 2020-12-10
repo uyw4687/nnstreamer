@@ -486,3 +486,9 @@ configure_file(input: 'nnstreamer.pc.in', output: 'nnstreamer.pc',
 
 # Build nnstreamer (common, plugins)
 subdir('gst')
+
+# Build ext subplugins
+ subdir('ext')
+
+# Build API
+# subdir('api')
